@@ -3,10 +3,10 @@ import TurtleMol as tm
 
 def testShake():
     iParams = {
-        'structureFile' : '.data/Water.xyz',
+        'structureFile' : 'tests/data/Water.xyz',
         'mode' : 'shake',
         'remove' : 50,
-        'output' : '.data/output.xyz'
+        'output' : 'tests/data/output.xyz'
     }
 
 
