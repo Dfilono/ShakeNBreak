@@ -1,7 +1,6 @@
 '''Functions to delete molecules'''
 
 import numpy as np
-import TurtleMol as tm
 
 def breakMol(struc, iParams):
     '''Deletes molecules based on defined parameters'''
@@ -12,6 +11,6 @@ def breakMol(struc, iParams):
     idx2Delete = np.random.choice(len(struc), deleteNum, replace=False)
 
     # Create a new list excluding the indicies to delete
-    newCoords = [struc[i] for i in range(len(struc)) if i not in deleteNum]
+    newCoords = [struc[i] for i in range(len(struc)) if i not in idx2Delete]
 
     return newCoords, 'molecule'

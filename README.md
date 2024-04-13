@@ -2,9 +2,6 @@
 <h4 align='center'>Shake your molecules around! Or delete them entirely!</h4>
 
 <p align="center">
-    <a href="https://github.com/Dfilono/ShakeNBreak/actions/workflows/python-package.yml">
-        <img src="https://github.com/Dfilono/ShakeNBreak/actions/workflows/python-package.yml/badge.svg" alt="Build Status ">
-    </a>
     <a href="https://github.com/Dfilono/ShakeNBreak/blob/main/LICENSE" target="_blank">
         <img src="https://img.shields.io/github/license/Dfilono/ShakeNBreak" alt="License">
     </a>

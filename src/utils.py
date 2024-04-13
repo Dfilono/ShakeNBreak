@@ -16,12 +16,12 @@ def groupAtoms(struc, n):
         groupedAtoms = [atoms[i: i + n] for i in range(0, len(atoms), n)]
 
         return groupedAtoms
-    
+
     res = struc['Residue'].values.tolist()
 
     # combine individual list into a list of lists
     atoms = [[atomBase[i], xBase[i], yBase[i],zBase[i], res[i]] for i in range(len(atomBase))]
-    
+
     # Group atoms into sublists of size n
     groupedAtoms = [atoms[i: i + n] for i in range(0, len(atoms), n)]
     return groupedAtoms

@@ -1,3 +1,5 @@
+'''Setup Package'''
+
 from setuptools import setup
 
 requirements = [
