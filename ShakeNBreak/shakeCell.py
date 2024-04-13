@@ -29,13 +29,13 @@ def shakeMol(struc, iParams):
 
         # Recreate the molecule with new coordinates and original information
         newMol = [
-            (atomNames[i], newPoints[0][i], newPoints[1][i], newPoints[2][i], 
+            (atomNames[i], newPoints[0][i], newPoints[1][i], newPoints[2][i],
              atomInfo[i]) for i in range(len(points))
             ]
 
         # Check if new position collides with other molecules
-        if not tm.isOverlapMoleculeKDTree(
-            newMol, kdTree, indexToAtom, radii, tol=1) or kdTree is None:
+        if kdTree is None or not tm.isOverlapMoleculeKDTree(
+            newMol, kdTree, indexToAtom, radii, tol=1):
             translatedCoords.append(newMol)
 
     return translatedCoords, 'molecule'
