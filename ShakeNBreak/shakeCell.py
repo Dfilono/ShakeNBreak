@@ -29,7 +29,8 @@ def shakeMol(struc, iParams):
 
         # Recreate the molecule with new coordinates and original information
         newMol = [
-            atomNames[i] + list(newPoints[i]) + atomInfo[i] for i in range(len(points))
+            (atomNames[i], newPoints[0][i], newPoints[1][i], newPoints[2][i], 
+             atomInfo[i]) for i in range(len(points))
             ]
 
         # Check if new position collides with other molecules
