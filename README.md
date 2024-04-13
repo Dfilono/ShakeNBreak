@@ -21,7 +21,7 @@
 
 ## Introduction
 
-ShakeNBreak is an addon to the [TurleMol](https://github.com/Dfilono/TurtleMol) Python package that should allow the user
+ShakeNBreak is an addon to the [TurtleMol](https://github.com/Dfilono/TurtleMol) Python package that should allow the user
 to Shake up thier system even more, adding a bit more chaos to TurtleMol's very ordered outputs! You can also use the Break
 function to remove molecules randomly at your leisure!
 
