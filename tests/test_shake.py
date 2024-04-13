@@ -1,4 +1,4 @@
-from src.shakeCell import shakeMol
+from ShakeNBreak.shakeCell import shakeMol
 import TurtleMol as tm
 
 def testShake():
