@@ -16,7 +16,7 @@ def testShake():
     if unitCell:
         iParams['unitCell'] = [unitCell['a'], unitCell['b'], unitCell['c']]
 
-    originalCoords = groupAtoms(struc) # Converts pandas dataframe to a list of lists
+    originalCoords = groupAtoms(struc, 3) # Converts pandas dataframe to a list of lists
 
     outStruc, strucType = breakMol(originalCoords, iParams) # Shake the structure
     assert len(outStruc) != 0, "Output structure should have some length"
