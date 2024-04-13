@@ -1,3 +1,5 @@
+'''Functions to delete molecules'''
+
 import numpy as np
 import TurtleMol as tm
 

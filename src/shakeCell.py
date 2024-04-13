@@ -1,3 +1,5 @@
+'''Functions to shake molecules'''
+
 import random
 import numpy as np
 import TurtleMol as tm

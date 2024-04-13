@@ -1,6 +1,7 @@
 import TurtleMol as tm
 from .shakeCell import shakeMol
 from .breakCell import breakMol
+from .utils import groupAtoms
 
 
 def main():
@@ -10,13 +11,14 @@ def main():
 
     # Get input file
     iParams['structureFile'] = input('\nProvide path to input file: ')
+    iParams['length'] = input('\nPlease provide the number of atoms per molecue: ')
 
     struc, unitCell = tm.readStrucFile(iParams['structureFile']) # Converts pdb or xyz files in pandas dataframe
 
     if unitCell:
         iParams['unitCell'] = [unitCell['a'], unitCell['b'], unitCell['c']]
 
-    originalCoords = tm.makeBase(struc) # Converts pandas dataframe to a list of lists
+    originalCoords = groupAtoms(struc, iParams['length']) # Converts pandas dataframe to a list of lists
 
     # Choose whether or Shake or Break the system
     iParams['mode'] = input('\nWhat would you like to do? (Shake, Break, ShakeNBreak, BreakNShake): ') 
