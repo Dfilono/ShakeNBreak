@@ -1,3 +1,5 @@
+'''The main file for ShakeNBreak'''
+
 import TurtleMol as tm
 from .shakeCell import shakeMol
 from .breakCell import breakMol
