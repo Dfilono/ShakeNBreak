@@ -1,4 +1,5 @@
 from ShakeNBreak.shakeCell import shakeMol
+from ShakeNBreak.utils import groupAtoms
 import TurtleMol as tm
 
 def testShake():
@@ -15,7 +16,7 @@ def testShake():
     if unitCell:
         iParams['unitCell'] = [unitCell['a'], unitCell['b'], unitCell['c']]
 
-    originalCoords = tm.makeBase(struc) # Converts pandas dataframe to a list of lists
+    originalCoords = groupAtoms(struc) # Converts pandas dataframe to a list of lists
 
     outStruc, strucType = shakeMol(originalCoords, iParams) # Shake the structure
     assert len(outStruc) != 0, "Output structure should have some length"

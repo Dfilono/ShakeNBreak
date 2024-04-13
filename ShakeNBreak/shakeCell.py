@@ -6,7 +6,7 @@ import TurtleMol as tm
 
 def shakeMol(struc, iParams):
     '''Shakes molecules based on defined parameters'''
-    radii = tm.setAtomicRadius['AtomicRadius'] # Get atomic radii
+    radii = tm.setAtomicRadius('AtomicRadius') # Get atomic radii
     translatedCoords = [] # Initialize list of translated coordinates
 
     # Initialize KD-Tree for collision checking
