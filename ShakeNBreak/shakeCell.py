@@ -25,11 +25,11 @@ def shakeMol(struc, iParams):
         dz = random.uniform(-iParams['magnitude'], iParams['magnitude'])
 
         # Apply the translation to each point
-        newPoints = np.array([points[0] + dx, points[1] + dy, points[2] + dz])
+        newPoints = points + np.array([dx, dy, dz])
 
         # Recreate the molecule with new coordinates and original information
         newMol = [
-            (atomNames[i], newPoints[0][i], newPoints[1][i], newPoints[2][i],
+            (atomNames[i], newPoints[i][0], newPoints[i][1], newPoints[i][2],
              atomInfo[i]) for i in range(len(points))
             ]
 
